@@ -7,6 +7,7 @@ import './App.css';
 // public : static파일 보관함
 // src : 소스코드 보관함
 // package-.json : 설치한 라이브러리 목록
+// npx create-react-app 프로젝트명 -> 파일 설치 
 
 // 메인페이지 작동 원리 
 // id가 root인 부분에 render 시켜준다
