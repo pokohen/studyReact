@@ -9,10 +9,23 @@ function App() {
   let content_list = [];
   let [content_title1, change_content_title1] = useState(['남자 코트 추천', '강남 우동 맛집']);
 
+
+  // 함수 이름을 넣을 때, 기본 함수 넣는 것처럼 함수()게 넣게 되면 바로 실행이 될 수 있기 때문에
+  // onClick = { 함수 } 이런식으로 적는 게 좋다
   function change_content(){
+    // change_content_title1(['여자 코트 추천', '강남 우동 맛집'])
+    // 일반적으로 newArray = array 이렇게 넣으면 reference data type으로 넣는다 - 얇은 복사
+    // spread opperation! - 신문법으로 복사하기 - deep copy
+
+    // Array/Object state 변경
+    // 일단 변경함수 써야함
+    // 변경함수 ( 대체할 데이터 )
+    // state는 직접 건들지 않느 것이 좋다
+
     content_list = [...content_title1];
     content_list[0] = '여자 코트 추천';
     change_content_title1(content_list);
+  
   }
 
   let [work1, change_work1] = useState('react 강의');
@@ -43,7 +56,7 @@ function App() {
       <div className="black-nav">
         <div>개발 Blog</div>
       </div>
-      <button onClick={ () =>{ change_content() }}>버튼</button> { content_title1[0] }
+      <button onClick={ change_content }>버튼</button> { content_title1[0] }
       <div className="list"> 
         <h3> { posts } <span onClick={ () => { change_like_count(like_count + 1) } }>👍</span> { like_count } </h3>
         <p>2월 17일 발행</p>
