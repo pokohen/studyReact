@@ -43,7 +43,7 @@ function Detail(props){
     // 2초뒤에 alert 사라지게
     // 항상 HTML에 보여지게 하는 것 보다 이렇게 하는 것이 훨씬
     let timer = setTimeout(()=>{
-      change_alert(false);
+      change_alert(!alert);
     }, 2000);
 
     // 컴포넌트가 사라질 때 코드를 실행시킬 수 있음
@@ -51,11 +51,15 @@ function Detail(props){
     // return () => {
       
     // }
+    return ()=>{
+      clearTimeout(timer);
+    }
+
   }, [
     // 실행조건 -> 빈칸이라면 아예 사용하지 않는다, 빈칸인 아이는 없으니깐
     // 즉 첫번째만 로딩된다
     // 여러개를 하고 싶으면 콤마를 적어서 할 수 있다
-    alert
+    // alert, inputData
   ]);
 
   // 여러개 사용하고 싶다면
@@ -77,6 +81,7 @@ function Detail(props){
             <Title className='red'>Detail</Title>
           </Box>
           {/* input이 변할 때마다, 재랜더링이 된다 */}
+          { inputData }
           <input onChange={ (e) => { change_inputData(e.target.value) }} />
 
           {
