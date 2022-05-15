@@ -1,22 +1,18 @@
 import React, { Component } from 'react';
-import myComponent from './myComponent';
-import logo from './logo.svg';
+import MyComponent from './myComponent.js';
 import './App.css';
 
+// 클래스형 Component
 class App extends Component {
   render() {
-    const name = 'react';
+    const name = 'react123';
     return (
-      <div>
-        <h1>{name}</h1>
-        <myComponent></myComponent>
-      </div>
+      <MyComponent>{name}</MyComponent>
     )
   }
 }
 
-
-
+// 함수형 Component
 // function App() {
 //   const name = 'Learn React 123';
 //   const test_name = 'test';
@@ -35,6 +31,7 @@ class App extends Component {
 //           target="_blank"
 //           rel="noopener noreferrer"
 //         >
+//           <MyComponent />
 //           {name}
 //         </a>
 //       </header>
