@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
+import IterationSample from './IterationSample'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -31,9 +32,11 @@ function App() {
     if(e.key === 'Enter') onClick();
   }
 
+
   return (
     <div className="App">
       <header className="App-header">
+        <IterationSample></IterationSample>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           vite 만드는 법<br/>
