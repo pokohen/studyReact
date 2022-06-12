@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
 import IterationSample from './IterationSample'
+import CountTest from './countTest'
+import InfoMember from './InfoMember'
 
 function App() {
-  const [count, setCount] = useState(0)
   const [form, setForm] = useState({
     username : '',
     message : ''
@@ -36,7 +37,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <CountTest></CountTest>
         <IterationSample></IterationSample>
+        <InfoMember></InfoMember>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           vite 만드는 법<br/>
@@ -47,11 +50,6 @@ function App() {
           2-3. yarn dev<br/>
         </p>
         <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
         <input
           type="text"
           name="username"
