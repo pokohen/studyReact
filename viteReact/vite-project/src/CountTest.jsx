@@ -1,27 +1,20 @@
-import React, { useReducer } from "react";
-
-function reducer(state, action) {
-    switch (action.type) {
-        case 'INCREMENT' : return { value : state.value + 1};
-        case 'DECREMENT' : return { value : state.value - 1};
-        default : return state;
-    }
-}
+import React from "react";
+import useCounter from "./useCount";
 
 const CountTest = ()=>{
 
-    const [state, dispatch] = useReducer(reducer, { value : 0 })
-
+    const [state, onClick] = useCounter({ count : 0})
+    const { count } = state;
 
     return (
         <p>
-            count is: {count}
+            count is: {count} 
         <br/>
-        <button type="button" onClick={ dispatch( { type : 'INCREMENT' } ) }>
+        <button type="button" onClick={ ()=>{onClick( { type : 'INCREMENT' } )} }> 
             up count  
         </button>
-        <button type="button" onClick={ dispatch( { type : 'DECREMENT' } )}>
-            down count  
+        <button type="button" onClick={ ()=>{onClick( { type : 'DECREMENT' } )}}>
+            down count   
         </button>
       </p>
     )

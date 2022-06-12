@@ -363,6 +363,11 @@ abbrev@1:
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
   integrity sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==
 
+adhere@1.x:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/adhere/-/adhere-1.2.3.tgz#3719ac497758735c817381a756720be7ba0360a2"
+  integrity sha512-1ItBtLjSW2yNZ6gSaHeir5X3Om77u9H2iQuGoPMMHZMGpzTARRFMqPqr5Lz4LVMFWOBZO6U4P9GG7A8+j7n1pw==
+
 agent-base@6, agent-base@^6.0.2:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/agent-base/-/agent-base-6.0.2.tgz#49fff58577cfee3f37176feab4c22e00f86d7f77"
@@ -528,6 +533,11 @@ cacache@^15.2.0:
     ssri "^8.0.1"
     tar "^6.0.2"
     unique-filename "^1.1.1"
+
+cadence@1.x:
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/cadence/-/cadence-1.0.12.tgz#6e3bf71404c9f654f8ca31b1474f6fdfab63477a"
+  integrity sha512-9YJbhySTUaMBKz3IVcXbpw70K7swnBlD/LFY59zfwZ5U5sHXvZQUCCHSPdENdCKQ4XmN+GpFJrGF/yBZ73jMMw==
 
 camelcase-keys@^6.2.2:
   version "6.2.2"
@@ -715,6 +725,15 @@ ecc-jsbn@~0.1.1:
   dependencies:
     jsbn "~0.1.0"
     safer-buffer "^2.1.0"
+
+eject@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/eject/-/eject-0.0.4.tgz#bad7c33522e63fe963ccb713d0cb0ee7a975d8fb"
+  integrity sha512-9tG0AOcZFxjQeZMCrUufZ2+118vMoy4SXN8O3M/di2yotk5ILERUoGKb5D1sR4EI3OjiAzAl0RTZ1OjiFAJ0XQ==
+  dependencies:
+    adhere "1.x"
+    cadence "1.x"
+    interrupt "1.x"
 
 electron-to-chromium@^1.4.118:
   version "1.4.141"
@@ -1185,6 +1204,13 @@ inherits@2, inherits@^2.0.3, inherits@~2.0.3:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.4.tgz#0fa2c64f932917c3433a0ded55363aae37416b7c"
   integrity sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
+
+interrupt@1.x:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/interrupt/-/interrupt-1.2.0.tgz#8f8e0d0cfba190e74682e82d8f0439205a670209"
+  integrity sha512-tLNebsqj9FHpUONB39XnYLtf6s62WPN2bV4j4EoqWsjsEHCIy8s9/wsogcWJg7T2Us11BjBKXvrRNRIRf+Kq2A==
+  dependencies:
+    supersede "1.x"
 
 ip@^1.1.5:
   version "1.1.8"
@@ -2057,6 +2083,11 @@ strip-indent@^3.0.0:
   integrity sha512-laJTa3Jb+VQpaC6DseHhF7dXVqHTfJPCRDaEbid/drOhgitgYku/letMUqOXFoWV0zIIUbjpdH2t+tYj4bQMRQ==
   dependencies:
     min-indent "^1.0.0"
+
+supersede@1.x:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/supersede/-/supersede-1.0.6.tgz#27ce9eaaf0b81e9ea31d7471c7aa4cb153f50065"
+  integrity sha512-68MKSJ+nGtjpQS7ckOvFiCydPY+2sz6iXmC3+/BkCqnaA/UtGOkcY2H5WOKZF9Xo5GUU+LK9ZfSzXVOre9H0rQ==
 
 supports-color@^5.3.0:
   version "5.5.0"
