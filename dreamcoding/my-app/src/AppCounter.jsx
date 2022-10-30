@@ -9,7 +9,7 @@ export default function AppCounter() {
     const [isOver, setIsOver] = useState(false);
 
     const handleClick = ()=> {
-        setCount(prev=> {
+        setCount( prev => {
             if(prev+1 > 10) setIsOver(true);
             return prev+1;
         });
