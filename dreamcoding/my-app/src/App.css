@@ -1,0 +1,81 @@
+.orange { 
+  color: orange;
+}
+
+.profile {
+  width: 300px;
+  position: relative;
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #ebebbe;
+  border-radius: 20px;
+  box-shadow: 7px 5px 23px -9px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 7px 5px 23px -9px rgba(0,0,0,0.75);
+  -moz-box-shadow: 7px 5px 23px -9px rgba(0,0,0,0.75);
+}
+
+.avartar {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+}
+
+.new-mark::after{
+  content: 'new';
+  width: fit-content;
+  height: fit-content;
+  padding: 5px 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #1a6d1a;
+}
+
+.photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+}
+
+.new {
+  position: absolute;
+  left: 70%;
+  top: 10%;
+  background-color: aquamarine;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 3rem auto;
+  border: 1px solid orange;
+  padding: 40px;
+}
+
+.number {
+  font-size: 72px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.button {
+  width: fit-content;
+  align-self: center;
+  font-size: 2rem;
+}
+
+.total-box {
+  border: 1px solid green;
+  width: 300px;
+  margin: 3rem auto;
+  padding: 40px;
+  font-size: 3rem;
+  text-align: center;
+}
