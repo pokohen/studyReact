@@ -27,6 +27,7 @@ export default function Products() {
             <label htmlFor='checkbox'>Show salse</label>
             <ul>
                 {products.map((product) => (
+                    // 키 값으로 re-rendoring 하는 부분을 구분한다. 그러므로 더욱 생산성을 높이기 위해서는 key은 필수
                     <li key={product.id}>
                         <article>
                             <h3>{product.name}</h3>
