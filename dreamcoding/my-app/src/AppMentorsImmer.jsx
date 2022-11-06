@@ -1,28 +1,30 @@
 import React from 'react';
-import { useReducer } from 'react';
-import personReducer from './reducer/person-reducer';
+import { useImmer } from 'use-immer';
 
-export default function AppMentor() {
+export default function AppMentorImmer() {
 
-    // const [person, setPerson] = useState(initialPerson);
-    // 먼저, funciton이 들어있는 부분을 넘기고, 뒤에 기본 값을 넣어놓기
-    // useReducer는 공식 문서 더 알아보기 
-    const [person, dispath] = useReducer(personReducer, initialPerson);
+    const [person, updatePerson] = useImmer(initialPerson);
     const handleUpdate = () => {
         const prev = prompt(`누구의 이름을 바꾸고 싶은가요?`);
         const current = prompt(`이름을 무엇으로 바꾸고 싶은가요?`);
-        dispath({type: 'updated', prev, current});
+        updatePerson((person) => {
+            const mentor = person.mentors.find(m => m.name === prev);
+            mentor.name = current;
+        });
     };
     
     const handleAdd = () => {
         const name = prompt(`멘토의 이름은?`);
         const title = prompt(`멘토의 직함은?`);
-        dispath({type: 'added', name, title});
+        updatePerson((person) => person.mentors.push({name, title}));
     };
 
     const handleDelete = () => {
-        const prev = prompt(`누구를 삭제하고 싶은가요?`);
-        dispath({type: 'deleted', prev});
+        const name = prompt(`누구를 삭제하고 싶은가요?`);
+        updatePerson(((person) => {
+            const index = person.mentors.findIndex((m) => m.name === name);
+            person.mentors.splice(index, 1);
+        }))
     };
 
     return (
@@ -64,13 +66,3 @@ const initialPerson = {
         },
     ],
 }
-
-
-/**
- * 
- * 상태관리
- * 리엑트의 상태관리는 불변성이므로, 상태는 readonly로 유지하고, 새로운 읽는 것을 만들어 내야한다.
- * 
- * 그러므로 Hook을 잘 사용하는 것이 중요! -> useReducer, ContextAPI (Global 상태 관리 가능)
- * 
- */
